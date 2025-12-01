@@ -1,0 +1,252 @@
+:root {
+    --bg-dark: #0f172a;       /* Deep Slate Blue */
+    --card-bg: #1e293b;       /* Slightly lighter card background */
+    --border-color: #334155;  /* Subtle border */
+    --text-primary: #f8fafc;  /* Pure White */
+    --text-muted: #94a3b8;    /* Readable Light Grey */
+    --accent: #fbbf24;        /* Amber/Gold Accent */
+    --danger: #ef4444;        /* Red */
+    --success: #22c55e;       /* Green */
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.2rem 0;
+}
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+    color: var(--text-primary) !important;
+}
+.nav-link {
+    color: #cbd5e1 !important;
+    font-weight: 600;
+}
+.nav-link:hover {
+    color: var(--text-primary) !important;
+}
+
+/* --- CARDS --- */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+.concert-card {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    height: 100%;
+    transition: transform 0.2s;
+}
+.concert-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* --- BUTTONS --- */
+.btn-primary {
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    text-transform: uppercase;
+    padding: 12px;
+}
+.btn-primary:hover {
+    background-color: var(--accent);
+    color: #000;
+}
+.btn-buy {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    font-weight: 700;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-buy:hover {
+    background-color: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+}
+.btn-upload {
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border: none;
+}
+.btn-upload:hover {
+    background: var(--accent);
+}
+
+/* --- FORMS --- */
+.form-control, .form-select {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    color: #ffffff !important;
+    padding: 12px;
+}
+.form-control:focus, .form-select:focus {
+    background-color: var(--bg-dark);
+    color: #fff;
+    border-color: var(--accent);
+    box-shadow: none;
+}
+.form-control::placeholder {
+    color: #ffffff !important;
+    opacity: 0.7;
+}
+.input-group-text {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    color: #fff;
+}
+.form-control::file-selector-button {
+    background-color: var(--border-color);
+    color: #fff;
+    border: none;
+}
+
+/* --- TYPOGRAPHY & UTILS --- */
+.text-light-muted {
+    color: var(--text-muted) !important;
+}
+.list-group-item {
+    background: transparent;
+    border-color: var(--border-color);
+    color: #cbd5e1;
+    padding: 12px 0;
+}
+
+/* --- COMPONENTS --- */
+.hero-carousel {
+    height: 450px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    position: relative;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+.hero-caption {
+    bottom: 20%;
+    left: 10%;
+    text-align: left;
+}
+.hero-title {
+    font-weight: 800;
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px #000;
+    line-height: 1;
+}
+
+.filter-tab {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+.filter-tab.active, .filter-tab:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.sidebar-widget {
+    background-color: #e2e8f0;
+    color: var(--bg-dark);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.sidebar-header {
+    background-color: #cbd5e1;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+}
+.event-list-item {
+    border-bottom: 1px solid #cbd5e1;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+}
+.event-date-box {
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 1.1rem;
+    min-width: 40px;
+}
+
+.status-badge {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.status-approved { background-color: var(--success); color: #000; }
+.status-pending_payment { background-color: #f59e0b; color: #000; }
+.status-verification_pending { background-color: #3b82f6; color: #fff; }
+.status-rejected { background-color: var(--danger); color: #fff; }
+
+.receipt-preview {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: var(--bg-dark);
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+}
+
+/* Concert Details Specifics */
+.hero-img-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+.hero-img-detail {
+    width: 100%;
+    aspect-ratio: 1080 / 1350;
+    object-fit: cover;
+    display: block;
+}
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+}
