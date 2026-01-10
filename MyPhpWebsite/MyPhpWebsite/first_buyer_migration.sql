@@ -1,1 +1,0 @@
-ALTER TABLE bookings ADD COLUMN is_first_buyer TINYINT(1) DEFAULT 0;
